@@ -2,17 +2,17 @@ version: 0.0
 os: linux
 hooks:
   ApplicationStop:
-    - location: scripts/stop_service.sh
+    - location: stop_service.sh
       timeout: 120
       runas: root
-    - location: scripts/kill_service.sh
+    - location: kill_service.sh
       timeout: 120
       runas: root
   AfterInstall:
-    - location: scripts/init.sh
+    - location: init.sh
       timeout: 600
       runas: root
   ApplicationStart:
-    - location: scripts/start_service.sh
+    - location: start_service.sh
       timeout: 120
       runas: root
